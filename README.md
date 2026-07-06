@@ -1,8 +1,20 @@
 # PitchMate
 
-PitchMate is a compact browser-based singing practice app. It extracts a reference pitch track from an uploaded audio file, listens to the microphone, and shows whether the singer is sharp, flat, or close to the target pitch.
+[中文](README_zh.md)
 
-## Run
+PitchMate is a browser-based singing practice app for checking pitch against a reference track.
+
+Live site: https://jliip.github.io/pitchmate/
+
+## Features
+
+- Upload an audio file as the reference track.
+- Extract a pitch curve from the reference audio in the browser.
+- Use the microphone to compare live singing with the target pitch.
+- Show whether the singer is sharp, flat, or close to the target.
+- Display note names, cents deviation, timing, and a basic score.
+
+## Run locally
 
 ```bash
 npm install
@@ -11,30 +23,16 @@ npm run dev
 
 Open the local Vite URL in Chrome or Edge. Microphone access requires a secure context; `localhost` works.
 
-## Deploy to GitHub Pages
+## Deploy
 
-This project is configured for a GitHub Pages project site using the repository name `pitchmate`.
-
-```bash
-npm run build
-```
-
-Push the project to a GitHub repository named `pitchmate`, then enable Pages with GitHub Actions as the source. After the deployment workflow completes, the app will be available at:
+This project is configured for GitHub Pages at:
 
 ```text
 https://jliip.github.io/pitchmate/
 ```
 
-GitHub Pages serves over HTTPS, which satisfies the browser secure-context requirement for microphone access.
+Build command:
 
-## Current MVP
-
-- Upload a browser-supported audio file such as mp3, wav, or m4a.
-- Extract a reference pitch curve with a local YIN detector.
-- Play, pause, seek, and restart the reference track.
-- Capture live microphone pitch and compare it to the synchronized reference pitch.
-- Show note names, cents deviation, hit/close/miss feedback, and a basic score.
-
-## Important Limitation
-
-The first version expects vocals-forward audio or a pre-separated vocal track. Fully automatic vocal isolation from arbitrary mixed songs usually needs a heavier model such as Demucs or Spleeter. A practical next step is to add a local Python preprocessing command that generates a vocals-only file or pitch JSON, then load that result into this app.
+```bash
+npm run build
+```
