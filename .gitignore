@@ -1,0 +1,26 @@
+node_modules/
+dist/
+coverage/
+.history/
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+
+# Build caches
+*.local
+*.tsbuildinfo
+.vite/
