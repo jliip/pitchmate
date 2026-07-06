@@ -22,7 +22,7 @@ npm run build
 Push the project to a GitHub repository named `pitchmate`, then enable Pages with GitHub Actions as the source. After the deployment workflow completes, the app will be available at:
 
 ```text
-https://<github-username>.github.io/pitchmate/
+https://jliip.github.io/pitchmate/
 ```
 
 GitHub Pages serves over HTTPS, which satisfies the browser secure-context requirement for microphone access.
